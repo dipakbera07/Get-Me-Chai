@@ -1,65 +1,55 @@
+"use client"
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { User } from 'lucide-react';
+import { CircleDollarSign } from 'lucide-react';
+import { Users } from 'lucide-react';
+import Link from "next/link";
+import { useSession } from "next-auth/react";
+
+
 
 export default function Home() {
+  const {data:session}=useSession()
+  const username = session?.user?.username
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="bg-[linear-gradient(94.3deg,rgba(26,33,64,1)_10.9%,rgba(81,84,115,1)_87.1%)] min-h-[calc(100vh-64px)]  text-[#d6d6d6]">
+      <div className="w-screen max-w-400 flex flex-col justify-between items-center m-auto ">
+
+        <div className="px-10 md:px-30 flex flex-col justify-center items-center py-25 gap-2 ">
+          <h1 className="text-4xl font-bold">Get Me Chai</h1>
+          <p>A croud funding platform for creator to fund their platform</p>
+          <p>A place where your fans can buy you a chai. unless the power of your fans get your project funded</p>
+          <p className="text-white">Created by Dipak Bera</p>
+          <div className="flex gap-3 py-2">
+            <Link href={`/${username}`}><Button>Start Here</Button></Link>
+            {/* <Button>Read More</Button> */}
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="bg-[#1c1d1e] w-full h-0.5"></div>
+        <div className="px-10 md:px-30 flex flex-col justify-center items-center py-10 gap-2 ">
+          <h1 className="text-2xl font-bold">Your fans can buy you a chai</h1>
+          <div className="flex flex-col sm:flex-row gap-12 justify-center items-center py-10 ">
+            <div className="flex flex-col justify-center items-center ">
+
+              <User className="size-12 sm:size-15" />
+              <p className="font-bold">Fans want to help you</p>
+              <p>Your fans are available to support you</p>
+            </div>
+            <div className="flex flex-col justify-center items-center">
+              <CircleDollarSign className="size-12 sm:size-15" />
+              <p className="font-bold">Fans want to help you</p>
+              <p>Your fans are available to support you</p>
+            </div>
+            <div className="flex flex-col justify-center items-center">
+              <Users className="size-12 sm:size-15" />
+              <p className="font-bold">Fans want to help you</p>
+              <p>Your fans are available to support you</p>
+            </div>
+          </div>
         </div>
-      </main>
+
+      </div>
     </div>
   );
 }
