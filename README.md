@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Get Me Chai ☕💙
 
-## Getting Started
+**Get Me Chai** is a crowdfunding platform where users can create an account, support creators, and contribute financially to their campaigns.
 
-First, run the development server:
+The project integrates **Razorpay** to provide a secure and convenient online payment experience.
+
+## ✨ Features
+
+* 🔐 User registration & authentication
+* 👤 User profiles
+* 💰 Crowdfunding & financial contributions
+* 💳 Razorpay payment gateway integration
+* 📊 Campaign/support tracking
+* 🗄️ MongoDB database integration
+* 🔒 Secure password handling
+* 📱 Responsive user interface
+
+## 🛠️ Tech Stack
+
+* **Next.js 16 & React 19** – Full-stack web application
+* **MongoDB + Mongoose** – Database and data management
+* **NextAuth.js** – Authentication & sessions
+* **Razorpay** – Payment gateway
+* **bcryptjs** – Password hashing
+* **Tailwind CSS** – Styling
+* **Shadcn UI / Radix UI** – UI components
+* **Lucide React** – Icons
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/dipakbera07/get-me-chai.git
+cd get-me-chai
+npm install
+```
+
+### 2. Environment Variables
+
+Create a `.env.local` file and add your required credentials:
+
+```env
+MONGODB_URI=Enter_your_MongoDB_URL
+NEXTAUTH_SECRET=Enter_your_NextAuth_Secret
+
+RAZORPAY_KEY_ID=Enter_your_Razorpay_Key_ID
+RAZORPAY_KEY_SECRET=Enter_your_Razorpay_Key_Secret
+```
+
+### 3. Run the Project
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open **http://localhost:3000** in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+> ⚠️ Never commit `.env.local` or payment/API credentials to GitHub.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎯 Purpose
 
-## Learn More
+Built as a full-stack project to practice **authentication, database management, crowdfunding workflows, and payment gateway integration using Razorpay**.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Developed by Dipak Bera**
