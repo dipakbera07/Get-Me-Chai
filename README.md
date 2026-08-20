@@ -41,11 +41,14 @@ npm install
 Create a `.env.local` file and add your required credentials:
 
 ```env
-MONGODB_URI=Enter_your_MongoDB_URL
-NEXTAUTH_SECRET=Enter_your_NextAuth_Secret
+MONGODB_URI=Enter your mongodb URI
+NEXTAUTH_SECRET=Enter your NextAuth Secret
 
-RAZORPAY_KEY_ID=Enter_your_Razorpay_Key_ID
-RAZORPAY_KEY_SECRET=Enter_your_Razorpay_Key_Secret
+NEXT_PUBLIC_KEY_ID=Enter your Razorpay Public key
+KEY_ID=Enter your Razorpay Public key
+KEY_SECRET=Enter your Razorpay Private key
+
+NEXTAUTH_URL=Enter your localhost url
 ```
 
 ### 3. Run the Project
